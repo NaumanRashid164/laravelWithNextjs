@@ -25,7 +25,7 @@ class UserController extends BaseController
     {
         $user = $request->user();
         return $this->sendResponse($user, "");
-}
+    }
     /**
      * Display a listing of the resource.
      */
