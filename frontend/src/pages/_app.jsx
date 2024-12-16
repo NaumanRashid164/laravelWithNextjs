@@ -8,6 +8,7 @@ import "../assets/css/feather.css";
 import "../assets/css/modal-video.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../assets/scss/style.scss";
+import "../assets/css/custom.css";
 
 const MyApp = ({ Component, pageProps }) => {
     const router = useRouter();

@@ -3,7 +3,7 @@
         "id": 1,
         "text": "Home",
         "path": "/",
-        "submenu": [
+        "_submenu": [
             {
                 "id": 11,
                 "text": "Home Page One",
@@ -111,7 +111,7 @@
         "id": 3,
         "text": "Explore",
         "path": "#!",
-        "submenu": [
+        "_submenu": [
             {
                 "id": 11,
                 "text": "Explore Filter",
@@ -191,7 +191,7 @@
         "id": 4,
         "text": "Pages",
         "path": "#!",
-        "megamenu": [
+        "_megamenu": [
             {
                 "id": 41,
                 "submenu": [
@@ -362,7 +362,7 @@
         "id": 5,
         "text": "Blog",
         "path": "/blog",
-        "submenu": [
+        "_submenu": [
             {
                 "id": 51,
                 "text": "Blog Single Column",

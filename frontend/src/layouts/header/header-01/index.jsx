@@ -102,18 +102,19 @@ const Header = ({ className }) => {
                             {!isAuthenticated && (
                                 <div className="setting-option header-btn">
                                     <div className="icon-box">
-                                        <Button
+                                        <a
                                             color="primary-alta"
-                                            className="connectBtn"
+                                            className="get-started-btn connectBtn"
                                             size="small"
-                                            onClick={onConnect}
+                                            href="/login"
+                                            // onClick={onConnect}
                                         >
-                                            Wallet connect
-                                        </Button>
+                                            Login
+                                        </a>
                                     </div>
                                 </div>
                             )}
-                            {isAuthenticated && (
+                            {/* {isAuthenticated && (
                                 <div className="setting-option rn-icon-list user-account">
                                     <UserDropdown
                                         onDisconnect={onDisconnect}
@@ -128,18 +129,18 @@ const Header = ({ className }) => {
                                         <span className="badge">6</span>
                                     </Anchor>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="setting-option mobile-menu-bar d-block d-xl-none">
                                 <div className="hamberger">
                                     <BurgerButton onClick={offcanvasHandler} />
                                 </div>
                             </div>
-                            <div
+                            {/* <div
                                 id="my_switcher"
                                 className="setting-option my_switcher"
                             >
                                 <ColorSwitcher />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
