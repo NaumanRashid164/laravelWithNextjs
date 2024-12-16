@@ -1,0 +1,127 @@
+@use "../default/variables";
+
+/*---------------------------
+ Masonary Item  
+-----------------------------*/
+.grid-metro3 {
+    margin: 0 -15px;
+    .grid-metro-item {
+        width: 33.33%;
+        padding: 0 15px;
+        margin-top: 30px;
+        @media #{variables.$md-layout} {
+            width: 50%;
+        }
+        @media #{variables.$sm-layout} {
+            width: 50%;
+        }
+        @media #{variables.$large-mobile} {
+            width: 100%;
+        }
+    }
+    .resizer {
+        width: 33.33%;
+        @media #{variables.$md-layout} {
+            width: 50%;
+        }
+        @media #{variables.$sm-layout} {
+            width: 50%;
+        }
+        @media #{variables.$large-mobile} {
+            width: 100%;
+        }
+    }
+}
+
+.grid-metro4 {
+    margin: 0 -15px;
+    .grid-metro-item {
+        width: 25%;
+        padding: 0 15px;
+        margin-top: 30px;
+        @media #{variables.$md-layout} {
+            width: 50%;
+        }
+        @media #{variables.$sm-layout} {
+            width: 50%;
+        }
+        @media #{variables.$large-mobile} {
+            width: 100%;
+        }
+    }
+    .resizer {
+        width: 25%;
+        @media #{variables.$md-layout} {
+            width: 50%;
+        }
+        @media #{variables.$sm-layout} {
+            width: 50%;
+        }
+        @media #{variables.$large-mobile} {
+            width: 100%;
+        }
+    }
+}
+
+
+.grid-metro5 {
+    margin: 0 -15px;
+    .grid-metro-item {
+        width: 20%;
+        padding: 0 15px;
+        margin-top: 30px;
+        @media #{variables.$lg-layout} {
+            width: 33.33%;
+        }
+        @media #{variables.$md-layout} {
+            width: 50%;
+        }
+        @media #{variables.$sm-layout} {
+            width: 50%;
+        }
+        @media #{variables.$large-mobile} {
+            width: 100%;
+        }
+    }
+    .resizer {
+        width: 20%;
+        @media #{variables.$lg-layout} {
+            width: 33.33%;
+        }
+        @media #{variables.$md-layout} {
+            width: 50%;
+        }
+        @media #{variables.$sm-layout} {
+            width: 50%;
+        }
+        @media #{variables.$large-mobile} {
+            width: 100%;
+        }
+    }
+}
+
+
+.sidebar-header {
+    .grid-metro4 {
+        .grid-metro-item {
+            @media #{variables.$lg-layout} {
+                width: 50%;
+            }
+        }
+        .resizer {
+            @media #{variables.$lg-layout} {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
