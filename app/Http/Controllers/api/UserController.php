@@ -48,7 +48,7 @@ class UserController extends BaseController
             return $this->sendResponse($user, __('messages.user.create'));
         } catch (\Exception $e) {
             \DB::rollBack();
-            return $this->sendError($e->getMessage(), $e->getCode());
+            return $this->sendError($e->getMessage(), 500);
         }
     }
 

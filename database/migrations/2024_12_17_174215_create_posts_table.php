@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string("title")->index();
-            $table->longText("desc")->index();
+            $table->longText("desc");
             $table->string("image")->index();
             $table->boolean("is_active")->index()->default(true);
             $table->text("config")->fullText()->nullable();

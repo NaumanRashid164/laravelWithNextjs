@@ -19,7 +19,7 @@ use Laravel\Passport\Passport;
 
 Route::post("/register", [UserController::class, "register"]);
 Route::post("/login", [UserController::class, "login"]);
-Route::group(["prefix" => "user/", "middleware" => 'auth:api'], function () {
+Route::group(["prefix" => "/user", "middleware" => 'auth:api'], function () {
     Route::get("/", [UserController::class, "index"]);
     // Blogs
     Route::apiResource("post", PostController::class);
