@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\PostController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,8 +17,10 @@ use Laravel\Passport\Passport;
 |
 */
 
-Route::group(["prefix" => "user/"], function () {
-    Route::get("/", [UserController::class, "index"])->middleware("auth:api");
-    Route::post("/register", [UserController::class, "register"]);
-    Route::post("/login", [UserController::class, "login"]);
+Route::post("/register", [UserController::class, "register"]);
+Route::post("/login", [UserController::class, "login"]);
+Route::group(["prefix" => "user/", "middleware" => 'auth:api'], function () {
+    Route::get("/", [UserController::class, "index"]);
+    // Blogs
+    Route::apiResource("post", PostController::class);
 });

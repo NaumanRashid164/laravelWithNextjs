@@ -82,22 +82,22 @@ class Handler extends ExceptionHandler
                 ]), ResponseAlias::HTTP_UNPROCESSABLE_ENTITY);
             }
 
-            if ($exception instanceof AuthenticationException) {
-                return response()->json(([
-                    'success' => false,
-                    'message' => 'Unauthenticated.',
-                ]), ResponseAlias::HTTP_UNAUTHORIZED);
-            }
+            // if ($exception instanceof AuthenticationException) {
+            //     return response()->json(([
+            //         'success' => false,
+            //         'message' => 'Unauthenticated.',
+            //     ]), ResponseAlias::HTTP_UNAUTHORIZED);
+            // }
 
-            //        if ($exception instanceof ValidationException) {
-            //            $validator = $exception->validator;
-            //            $message = $validator->errors()->first();
-            //            $code = \Illuminate\Http\Response::HTTP_UNPROCESSABLE_ENTITY;
-            //
-            //            if (! $request->expectsJson() and ! $request->isXmlHttpRequest()) {
-            //                return Redirect::back()->withInput()->withErrors($message);
-            //            }
-            //        }
+            if ($exception instanceof ValidationException) {
+                $validator = $exception->validator;
+                $message = $validator->errors()->first();
+                $code = \Illuminate\Http\Response::HTTP_UNPROCESSABLE_ENTITY;
+
+                if (! $request->expectsJson() and ! $request->isXmlHttpRequest()) {
+                    return Redirect::back()->withInput()->withErrors($message);
+                }
+            }
 
             if ($request->expectsJson() or $request->isXmlHttpRequest()) {
                 return Response::json([
